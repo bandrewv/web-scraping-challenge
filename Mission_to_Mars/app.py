@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
-import mission_to_mars
+import scrape_mars
+from jinja2 import Environment, PackageLoader, select_autoescape
+
 
 # Creating an instance of Flask
 app = Flask(__name__)
@@ -23,7 +25,7 @@ def home():
 def scrape():
 
     # Run the scrape function
-    mars_data = mission_to_mars.scrape()
+    mars_data = scrape_mars.scrape()
 
     # Update the Mongo database using update and upsert=True
     mongo.db.collection.update({}, mars_data, upsert=True)

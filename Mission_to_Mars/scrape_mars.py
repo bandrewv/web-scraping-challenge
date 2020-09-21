@@ -56,7 +56,7 @@ def scrape():
     time.sleep(1)
     image_html = browser.html
     soup = bs(image_html,'html.parser')
-    featured_image_url = 'https://www.jpl.nasa.gov/' + soup.find('img', class_='fancybox-image')['src']
+    featured_image_url = 'https://www.jpl.nasa.gov' + soup.find('img', class_='fancybox-image')['src']
 
     # Putting latest image url into dictionary
     image_dict = {
