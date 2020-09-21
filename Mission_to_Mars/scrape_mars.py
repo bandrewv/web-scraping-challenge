@@ -67,11 +67,11 @@ def scrape():
     ]
 
     final_dict = {
-        'Headline':news_title,
-        'Article':news_p,
-        'Featured Image':featured_image_url,
-        'Facts':facts_html_table,
-        'Hemispheres':hemisphere_image_urls
+        'headline':news_title,
+        'article':news_p,
+        'featured_image':featured_image_url,
+        'facts':facts_html_table,
+        'hemispheres':hemisphere_image_urls
     }
 
     return final_dict
