@@ -13,10 +13,10 @@
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
         {% if mars %}
-        <img src="{{ mars.featured_img }}" alt="Featured Image from www.jpl.nasa.gov">
-        <h2>Are my items going to show up???</h2>
-        <h3>Max Temp: {{ mars.headline }}</h3>
-        <h3>Min Temp: {{ mars.article }}</h3>
+        <img src='{{ mars.featured_img }}' alt="Featured Image from www.jpl.nasa.gov">
+        <h2>Latest Mars News</h2>
+        <h4>{{ mars.headline }}</h4>
+        <p>{{ mars.article }}</p>
         {% endif %}
       </div>
       </div>
